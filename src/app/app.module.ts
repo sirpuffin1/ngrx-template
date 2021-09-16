@@ -10,7 +10,7 @@ import { environment } from '../environments/environment';
 import * as fromUser from './store/reducers/user/user.reducer';
 import * as fromAuth from './store/reducers/auth/auth.reducer';
 import { EffectsModule } from '@ngrx/effects';
-import { AuthEffects } from './store/auth/effects/auth.effects';
+import { AuthEffects } from './store/effects/auth/auth.effects';
 
 @NgModule({
   declarations: [
