@@ -108,5 +108,8 @@
       }
     }
   },
-  "defaultProject": "mean-tutorial"
+  "defaultProject": "mean-tutorial",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
