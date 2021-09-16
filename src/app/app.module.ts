@@ -8,6 +8,7 @@ import { reducers, metaReducers } from './store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import * as fromUser from './store/reducers/user/user.reducer';
+import * as fromAuth from './store/reducers/auth/auth.reducer';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import * as fromUser from './store/reducers/user/user.reducer';
     AppRoutingModule,
     StoreModule.forRoot(reducers, { metaReducers }),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
-    StoreModule.forFeature(fromUser.userFeatureKey, fromUser.reducer)
+    StoreModule.forFeature(fromUser.userFeatureKey, fromUser.reducer),
+    StoreModule.forFeature(fromAuth.authFeatureKey, fromAuth.reducer)
   ],
   providers: [],
   bootstrap: [AppComponent]
