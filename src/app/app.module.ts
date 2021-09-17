@@ -11,6 +11,7 @@ import * as fromUser from './store/reducers/user/user.reducer';
 import * as fromAuth from './store/reducers/auth/auth.reducer';
 import { EffectsModule } from '@ngrx/effects';
 import { AuthEffects } from './store/effects/auth/auth.effects';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AuthEffects } from './store/effects/auth/auth.effects';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     StoreModule.forRoot(reducers, { metaReducers }),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     StoreModule.forFeature(fromUser.userFeatureKey, fromUser.reducer),
